@@ -127,4 +127,5 @@ docker-compose up -d
 - **Architecture**: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - **Demo guide**: [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md)
 - **API reference**: [docs/API.md](docs/API.md)
-- **Issues and discussions**: available after the GitHub remote is created
+- **Issues**: [GitHub Issues](https://github.com/yuzhou602/testpilot-ai/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yuzhou602/testpilot-ai/discussions)

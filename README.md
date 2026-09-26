@@ -2,6 +2,11 @@
 
 **AI 智能软件测试与缺陷分析平台**
 
+[![CI](https://github.com/yuzhou602/testpilot-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/yuzhou602/testpilot-ai/actions/workflows/ci.yml)
+[![Vue 3](https://img.shields.io/badge/Vue-3.5-42b883)](frontend/package.json)
+[![Java 21](https://img.shields.io/badge/Java-21-e76f00)](backend/pom.xml)
+[![Showcase](https://img.shields.io/badge/mode-showcase-7897aa)](docs/DEMO_GUIDE.md)
+
 TestPilot AI 是一个面向 QA 与研发团队的 AI Agent 测试平台。用户只需描述测试目标，Agent 即可生成测试计划、调用 API 或浏览器工具执行测试、分析失败、关联证据，并输出缺陷与测试报告。
 
 它的重点不是“用 AI 聊天管理测试”，而是让 Agent 的每一步执行、工具调用、失败分析和证据来源都可观察、可追踪。
@@ -39,6 +44,8 @@ VITE_AUTH_REQUIRED=false
 演示模式完全在前端运行；后端不可用不会阻塞展示。
 
 详细步骤见 [演示指南](docs/DEMO_GUIDE.md)。
+
+项目仓库：[github.com/yuzhou602/testpilot-ai](https://github.com/yuzhou602/testpilot-ai)
 
 ## 核心工作流
 

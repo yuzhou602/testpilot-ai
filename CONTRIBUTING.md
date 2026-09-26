@@ -39,7 +39,7 @@ We expect all contributors to follow these standards:
 # Fork the repository on GitHub
 git clone https://github.com/your-username/testpilot-ai.git
 cd testpilot-ai
-git remote add upstream <repository-url>
+git remote add upstream https://github.com/yuzhou602/testpilot-ai.git
 ```
 
 ## Development Setup
