@@ -124,6 +124,7 @@ docker-compose up -d
 
 ## Support
 
-- **Documentation**: [docs/testpilot.ai](https://docs.testpilot.ai)
-- **Issues**: [GitHub Issues](https://github.com/testpilot/testpilot-ai/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/testpilot/testpilot-ai/discussions)
+- **Architecture**: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- **Demo guide**: [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md)
+- **API reference**: [docs/API.md](docs/API.md)
+- **Issues and discussions**: available after the GitHub remote is created
