@@ -1,0 +1,23 @@
+flowchart TD
+    U[QA / Developer] --> UI[TestPilot UI<br/>Vue 3 + TypeScript]
+    UI --> WS[Agent Workspace<br/>Plan + Activity + Evidence]
+    WS --> DEMO[Demo Runtime<br/>Deterministic showcase]
+    WS --> CLIENT[REST + SSE Client]
+    CLIENT --> API[Spring Boot API<br/>JWT + Project Data]
+    API --> CORE[Agent Runtime<br/>Planner + State Machine]
+    CORE --> EXEC[Executor + Failure Analyzer]
+    CORE --> TRACE[Trace + Evaluation<br/>Evidence-backed output]
+    EXEC --> TOOLS[Tool Registry<br/>HTTP + Browser + Log + DB]
+    TOOLS --> TARGET[Target System<br/>API + Web UI]
+    API --> DATA[(MySQL + Redis)]
+    CORE --> LLM[LLM Provider<br/>Spring AI]
+    TRACE -. observable result .-> UI
+
+    classDef primary fill:#142433,stroke:#7e9caf,color:#f3f4f6,stroke-width:2px;
+    classDef surface fill:#111827,stroke:#334155,color:#d1d5db;
+    classDef accent fill:#173026,stroke:#4a866e,color:#dcfce7;
+    classDef external fill:#2a1f12,stroke:#b98743,color:#fef3c7;
+    class UI,WS,CORE primary;
+    class API,CLIENT,EXEC,TOOLS,TRACE,DATA surface;
+    class DEMO accent;
+    class TARGET,LLM external;

@@ -1,0 +1,20 @@
+package com.testpilot.common.enums;
+
+public enum SseEventType {
+    TASK_STARTED,
+    PLAN_CREATED,
+    STEP_STARTED,
+    STEP_COMPLETED,
+    STEP_FAILED,
+    TOOL_CALL,
+    TOOL_RESULT,
+    ASSERTION,
+    REPLAN,
+    WAITING_USER,
+    FAILURE_ANALYSIS,
+    BUG_CREATED,
+    TASK_COMPLETED,
+    TASK_FAILED,
+    AGENT_THINKING,
+    COVERAGE_UPDATE
+}

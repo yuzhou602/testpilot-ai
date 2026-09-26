@@ -1,0 +1,473 @@
+{
+  "common": {
+    "appName": "TestPilot AI",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info"
+    ,"close": "Close"
+  },
+  "nav": {
+    "workspace": "Workspace",
+    "apiTesting": "API Testing",
+    "uiTesting": "UI Testing",
+    "requirements": "Requirements",
+    "testCases": "Test Cases",
+    "bugs": "Bugs",
+    "reports": "Reports",
+    "evaluation": "Evaluation",
+    "settings": "Settings",
+    "projects": "Projects"
+    ,"runTest": "Run test"
+  },
+  "shell": {
+    "workspaceGroup": "Workspace",
+    "testingGroup": "Testing",
+    "qualityGroup": "Quality",
+    "agentGroup": "Agent",
+    "systemGroup": "System",
+    "agentExecuting": "Run active",
+    "agentOnline": "System ready",
+    "runtimeConnected": "Runtime connected",
+    "collapse": "Collapse navigation",
+    "expand": "Expand navigation",
+    "selectProject": "Select project",
+    "notifications": "Notifications",
+    "activeModel": "Active model",
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation",
+    "skipWorkspace": "Skip to workspace",
+    "traces": "Traces"
+    ,"moreTools": "More tools", "openWorkspace": "Open AI test workspace", "useLight": "Use light theme", "useDark": "Use dark theme", "userMenu": "Open user menu", "primaryNavigation": "Primary navigation", "runtimeReachable": "Agent runtime reachable"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "email": "Email",
+    "displayName": "Display Name",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful",
+    "registerSuccess": "Registration successful",
+    "heroTitle": "Every action your testing agent takes, fully traceable.", "heroDesc": "TestPilot AI understands test goals, plans cases, calls API and browser tools, and connects every failure to reproducible evidence.", "previewPlan": "Create test plan", "previewExecute": "Run boundary tests", "previewAnalyze": "Correlate evidence", "previewReport": "Generate report", "previewEvidence": "Correlating HTTP response, application log, and field constraints…", "traceValue": "Complete execution path", "evidenceValue": "Reproducible failures", "healingValue": "Locator recovery decisions",
+    "createAccount": "Create account", "workspaceAccess": "Workspace access", "welcome": "Enter TestPilot", "registerHint": "Create a local showcase account.", "loginHint": "Sign in with an account or enter the interactive product demo.", "or": "or", "enterDemo": "Enter product demo", "demoHint": "No account needed · ShopSphere sample project", "switchLogin": "Already have an account? Sign in", "switchRegister": "No account? Create one", "localNotice": "Showcase accounts and demo data remain local and are not sent to third-party services.", "fillFields": "Enter a username and password", "loginFailed": "Login failed. Check your account or enter the demo."
+  },
+  "projects": {
+    "title": "Projects", "subtitle": "Select a test context and verify that its environment and API contract are ready.", "newProject": "New project", "activeProject": "Active project", "runtime": "Runtime", "lastExecution": "Last execution", "project": "Project", "environment": "Environment", "sources": "Test sources", "latestRun": "Latest run", "readiness": "Readiness", "noDescription": "No project description", "emptyTitle": "No test project yet", "emptyDesc": "Connect a test environment and start the first agent test.", "createFirst": "Create first project", "connectEnvironment": "Connect environment", "connectEnvironmentDesc": "Configure the base URL and secure credentials.", "importContract": "Import test sources", "importContractDesc": "Connect OpenAPI, requirements, or a browser entry point.", "describeGoal": "Describe a test goal", "describeGoalDesc": "The Agent plans, executes, and generates evidence.", "createTitle": "Create test project", "projectName": "Project name", "description": "Description", "baseUrl": "Base URL", "nameRequired": "Enter a project name", "created": "Project created"
+  },
+  "workspace": {
+    "title": "AI Test Workspace",
+    "subtitle": "Describe your testing goal and let the AI Agent handle the rest",
+    "tasks": "Tasks",
+    "agent": "Agent",
+    "context": "Context",
+    "createTask": "Create Task",
+    "taskGoal": "Task Goal",
+    "taskGoalPlaceholder": "e.g., Test user login functionality including normal flow, error handling, and security",
+    "execute": "Execute",
+    "cancel": "Cancel Task",
+    "noTasks": "No tasks yet",
+    "taskCreated": "Task created successfully",
+    "taskStarted": "Task execution started",
+    "newTaskTitle": "What would you like to test?",
+    "newTaskHint": "Describe your testing goal. The Agent will autonomously plan, execute, and analyze.",
+    "steps": "Steps",
+    "mission": "Test objective",
+    "missionComplete": "mission complete",
+    "agentFocus": "Current execution",
+    "investigating": "Investigating failed assertion",
+    "boundaryTest": "Boundary test · Username length 500",
+    "failureAnalysis": "Failure analysis",
+    "executionPlan": "Execution plan",
+    "liveActivity": "Live activity",
+    "events": "events",
+    "continuePlaceholder": "Ask Agent to do something…",
+    "overview": "Overview",
+    "evidence": "Evidence",
+    "environment": "Environment"
+    ,"newTest": "New test"
+    ,"quickStart": "Quick demo"
+    ,"demoMode": "Quick demo mode"
+    ,"startTest": "Start test"
+    ,"starting": "Starting…"
+    ,"toStart": "to start"
+    ,"noProject": "No project"
+    ,"openapiConnected": "OpenAPI connected"
+    ,"flowUnderstand": "Understand"
+    ,"flowPlan": "Plan"
+    ,"flowExecute": "Execute"
+    ,"flowEvidence": "Evidence"
+    ,"presetLogin": "Full login module test"
+    ,"presetLoginGoal": "Test the complete user login module, focusing on invalid input, account lockout, tokens, and SQL injection."
+    ,"presetApi": "API edge-case test"
+    ,"presetApiGoal": "Test authentication API errors and boundary conditions, then analyze every unexpected response."
+    ,"presetUi": "UI login and locator recovery"
+    ,"presetUiGoal": "Run the complete UI login flow; attempt locator healing on failure and preserve the evidence."
+    ,"unexpectedResponse": "Unexpected response"
+    ,"collectingEvidence": "Correlating the response, application log, and field constraints to verify reproducibility."
+    ,"viewEvidence": "View evidence"
+    ,"openTrace": "Open trace"
+    ,"filterAll": "All"
+    ,"filterFailure": "Failures"
+    ,"filterBrowser": "Browser"
+    ,"progress": "Progress"
+    ,"tests": "Test results"
+    ,"pass": "Pass"
+    ,"fail": "Fail"
+    ,"total": "Total"
+    ,"duration": "Duration"
+    ,"result": "Result summary"
+    ,"viewFullTrace": "View full trace"
+    ,"currentEvidence": "Current evidence", "executionFlow": "Test execution flow", "openFullTrace": "Open full trace", "replayDemo": "Replay demo execution", "resumeTask": "Resume task", "pauseTask": "Pause task", "stopTask": "Stop task", "noTaskSelected": "No task selected"
+    ,"applicationLog": "Application log"
+    ,"openEvidenceInTrace": "Open evidence in trace"
+  },
+  "agent": {
+    "status": "Agent Status",
+    "running": "Running",
+    "completed": "Completed",
+    "failed": "Failed",
+    "pending": "Pending",
+    "thinking": "Thinking...",
+    "plan": "Test Plan",
+    "steps": "Steps",
+    "step": "Step",
+    "tool": "Tool",
+    "result": "Result",
+    "error": "Error",
+    "latency": "Latency",
+    "tokens": "Tokens",
+    "retries": "Retries"
+  },
+  "apiTesting": {
+    "title": "API Testing IDE",
+    "method": "Method",
+    "url": "URL",
+    "urlPlaceholder": "Enter request URL",
+    "params": "Params",
+    "headers": "Headers",
+    "body": "Body",
+    "auth": "Auth",
+    "send": "Send Request",
+    "response": "Response",
+    "status": "Status",
+    "time": "Time",
+    "size": "Size"
+    ,"endpoints": "API endpoints"
+    ,"importHint": "Import an OpenAPI definition to begin"
+    ,"requestWorkbench": "Request workbench"
+    ,"authenticateUser": "Authenticate user"
+    ,"selectEndpoint": "Select an endpoint"
+    ,"coverageGaps": "coverage gaps"
+    ,"sending": "Sending…"
+    ,"runWithAgent": "Run with Agent"
+    ,"request": "Request"
+    ,"responseReady": "Response channel ready"
+    ,"responseHint": "Send the current request or delegate the endpoint to the Agent."
+    ,"contractMatched": "Response matches the API contract"
+    ,"agentAnalysis": "Agent test suggestions"
+    ,"gaps": "gaps"
+    ,"description": "Description"
+    ,"requestSchema": "Request schema"
+    ,"generateAndRun": "Generate and run 5 tests"
+    ,"useRequestContext": "Uses the current request as test context"
+    ,"emptyUsername": "Empty username"
+    ,"requiredBoundary": "Boundary · required field"
+    ,"maxPassword": "Maximum password length"
+    ,"schemaBoundary": "Boundary · schema limit"
+    ,"sqlInjection": "SQL injection payload"
+    ,"inputSecurity": "Security · input handling"
+    ,"xssPayload": "XSS payload"
+    ,"outputSecurity": "Security · output encoding"
+    ,"wrongCredentials": "Wrong credentials"
+    ,"errorContract": "Error path · response contract"
+  },
+  "uiTesting": {
+    "title": "UI Testing",
+    "steps": "Test Steps",
+    "browser": "Browser Preview",
+    "inspector": "Element Inspector",
+    "selfHealing": "Self-Healing",
+    "addStep": "Add Step",
+    "record": "Record",
+    "play": "Play",
+    "pause": "Pause",
+    "stepAction": "Action",
+    "stepSelector": "Selector",
+    "stepValue": "Value"
+    ,"run": "Run"
+    ,"running": "Running…"
+    ,"stop": "Stop"
+    ,"liveBrowser": "Live browser"
+    ,"healingActive": "Locator healing active"
+    ,"emptyBrowser": "Run a UI test to display the browser here"
+    ,"secureLogin": "Secure login"
+    ,"status": "Status"
+    ,"locatorHealing": "Locator self-healing"
+    ,"recoveryTrace": "Recovery trace"
+    ,"before": "Before · Original locator"
+    ,"after": "After · Candidate locator"
+    ,"elementNotFound": "Element not found"
+    ,"textEvidence": "Visible text"
+    ,"confidence": "Confidence"
+    ,"accessibleRole": "Accessible role"
+    ,"visibleText": "Visible text"
+    ,"position": "position"
+    ,"historyMatch": "History match"
+    ,"decision": "Execution decision"
+    ,"useCandidate": "Use candidate for this run"
+    ,"decisionReason": "Role, visible text, and DOM position agree; permanent updates still require review."
+    ,"recovered": "Execution recovered"
+    ,"keepRunOnly": "Keep run-only"
+    ,"proposeUpdate": "Propose locator update"
+    ,"stepNavigate": "Navigate to login"
+    ,"stepFindUsername": "Find username input"
+    ,"stepFillUsername": "Fill username"
+    ,"stepFindPassword": "Find password input"
+    ,"stepFillPassword": "Fill password"
+    ,"stepClickLogin": "Click login button"
+    ,"stepHealing": "Run locator healing"
+    ,"stepAssertDashboard": "Assert login result"
+    ,"runCompleted": "UI test completed · locator recovered with evidence"
+    ,"runStopped": "UI execution stopped · collected evidence preserved"
+    ,"runOnlySaved": "Recovered locator retained for this run only"
+    ,"updateProposed": "Locator update proposed with evidence · awaiting review"
+  },
+  "requirements": {
+    "title": "Requirements",
+    "addRequirement": "Add Requirement",
+    "coverage": "Coverage",
+    "rules": "Rules",
+    "noRequirements": "No requirements yet",
+    "source": "Source",
+    "riskLevel": "Risk Level",
+    "status": "Status"
+    ,"review": "Requirement review"
+    ,"covered": "covered"
+    ,"gap": "gap"
+    ,"businessRules": "Business rules"
+    ,"tests": "tests"
+    ,"aiCoverage": "AI coverage analysis"
+    ,"evidenceRequired": "Evidence required"
+    ,"missingCoverage": "Missing coverage"
+    ,"generateBeforeRelease": "Generate boundary evidence before release"
+    ,"fullyCovered": "This requirement is fully covered. No additional tests are recommended."
+    ,"boundaryProposed": "Boundary set proposed by Agent"
+    ,"generateMissing": "Generate missing tests"
+    ,"overallCoverage": "Overall coverage"
+    ,"rulesNeedEvidence": "business rules require evidence"
+    ,"releaseSignal": "Release signal"
+    ,"mediumRisk": "Medium risk"
+    ,"unlockUnverified": "The unlock boundary remains unverified."
+    ,"demoTitle1": "Login credentials are required"
+    ,"demoTitle2": "Account locks after five failures"
+    ,"demoTitle3": "Access token lifecycle"
+    ,"demoDescription": "Five consecutive invalid passwords lock the account for 30 minutes."
+    ,"ruleR3": "The fifth failure immediately locks the account"
+    ,"ruleR4": "The account automatically unlocks after 30 minutes"
+    ,"coverageComplete": "Coverage is complete for this requirement"
+    ,"generatedBoundary": "Generated {count} boundary tests and updated coverage"
+  },
+  "testCases": {
+    "title": "Test Cases",
+    "addTestCase": "Add Test Case",
+    "noTestCases": "No test cases yet",
+    "caseCode": "Case Code",
+    "title2": "Title",
+    "testType": "Test Type",
+    "strategy": "Strategy",
+    "priority": "Priority",
+    "automated": "Automated",
+    "aiGenerated": "AI Generated"
+    ,"searchCases": "Search test cases…"
+    ,"runSelected": "Run selected"
+    ,"aiGenerate": "AI generate"
+    ,"cases": "cases"
+    ,"coverage": "coverage"
+    ,"scenario": "Scenario"
+    ,"requirement": "Requirement"
+    ,"risk": "Risk"
+    ,"automation": "Automation"
+    ,"lastResult": "Last result"
+    ,"selectedStarted": "Sent {count} test cases to the Agent"
+    ,"alreadyIncluded": "AI-generated coverage cases are already included"
+    ,"generatedFromGap": "Generated one high-risk boundary case from coverage gaps"
+    ,"demoTitle1": "Valid username and password"
+    ,"demoDesc1": "Happy-path authentication"
+    ,"demoTitle2": "Empty password is rejected"
+    ,"demoDesc2": "Required-field boundary"
+    ,"demoTitle3": "Fifth invalid password locks account"
+    ,"demoDesc3": "State transition at failure threshold"
+    ,"demoTitle4": "Username length 500"
+    ,"demoDesc4": "Maximum-length boundary discovered a server error"
+    ,"demoTitle5": "SQL injection payload is rejected"
+    ,"demoDesc5": "Authentication input security"
+    ,"typeApi": "API"
+    ,"typeBoundary": "Boundary"
+    ,"typeState": "State"
+    ,"typeSecurity": "Security"
+  },
+  "bugs": {
+    "title": "Bug Center",
+    "addBug": "Add Bug",
+    "noBugs": "No bugs yet",
+    "bugId": "Bug ID",
+    "title2": "Title",
+    "severity": "Severity",
+    "status": "Status",
+    "module": "Module",
+    "rootCause": "Root Cause",
+    "confidence": "Confidence",
+    "fix": "Suggested Fix"
+    ,"defects": "defects"
+    ,"highConfidence": "high-confidence"
+    ,"observedFact": "Observed fact"
+    ,"linkedEvidence": "Linked evidence"
+    ,"aiHypothesis": "AI hypothesis"
+    ,"reproduced": "reproduced"
+    ,"expectedContract": "Expected · Contract"
+    ,"actualObserved": "Actual · Observed"
+    ,"reproductionSteps": "Steps to reproduce"
+    ,"aiRootCause": "AI root-cause hypothesis"
+    ,"unconfirmed": "Unconfirmed · review before action"
+    ,"hypothesis": "Hypothesis"
+    ,"suspectedModule": "Suspected module"
+    ,"demoBug1": "Username over 255 characters returns 500"
+    ,"demoBug2": "Lockout response leaks remaining duration"
+    ,"demoHypothesis": "The request DTO may lack an upper-bound username length constraint."
+    ,"demoExpected": "Return 400 with a clear field validation message"
+    ,"demoActual": "Return 500 Internal Server Error"
+    ,"demoSteps": "1. Open POST /api/auth/login\n2. Set username length to 500\n3. Send request"
+  },
+  "reports": {
+    "title": "Test Reports",
+    "noReports": "No reports yet",
+    "passRate": "Pass Rate",
+    "totalTests": "Total Tests",
+    "passed": "Passed",
+    "failed": "Failed",
+    "coverage": "Coverage",
+    "generateReport": "Generate Report"
+    ,"exportPdf": "Export PDF"
+    ,"share": "Share report"
+    ,"execution": "Execution"
+    ,"demoTitle": "Authentication comprehensive test"
+    ,"demoSummary": "Core login behavior is stable, but validation gaps create two reproducible failures. Release risk remains medium until the 500 response is fixed."
+    ,"riskAssessment": "Risk assessment"
+    ,"coverageGaps": "Coverage gaps"
+    ,"evidenceBugs": "Evidence-backed bugs"
+    ,"demoRisk": "MEDIUM · Input validation is the dominant risk area"
+    ,"demoCoverageGap": "Overall 84%; account unlock boundaries at 29 / 30 / 31 minutes lack evidence"
+    ,"demoBugs": "1 major and 1 minor evidence-backed issue"
+    ,"aiRecommendations": "AI recommendations"
+    ,"demoRecommendations": "Add DTO length validation, cover token expiry, and generate 29 / 30 / 31-minute account unlock boundary tests."
+    ,"keyFindings": "Key findings"
+    ,"signals": "signals"
+    ,"findingValidation": "Input length validation failed"
+    ,"findingValidationDetail": "A 500 response is reproducible with a 500-character username."
+    ,"findingLockout": "Lockout boundary is incomplete"
+    ,"findingLockoutDetail": "29 / 30 / 31-minute recovery behavior has no evidence."
+    ,"findingStable": "Core login flow is stable"
+    ,"findingStableDetail": "Happy path and invalid credential handling remain deterministic."
+    ,"coverageMap": "Coverage map"
+    ,"overall": "overall"
+    ,"authentication": "Authentication"
+    ,"accountLockout": "Account lockout"
+    ,"tokenLifecycle": "Token lifecycle"
+    ,"openEvidenceTrace": "Open evidence trace"
+  },
+  "evaluation": {
+    "title": "AI Evaluation",
+    "noEvaluations": "No evaluations yet",
+    "model": "Model",
+    "promptVersion": "Prompt Version",
+    "scores": "Scores",
+    "requirementScore": "Requirement Understanding",
+    "testCaseScore": "Test Case Quality",
+    "coverageScore": "Coverage",
+    "completionScore": "Completion Rate",
+    "subtitle": "Compare agent versions on one test set and check quality gates before promotion.",
+    "run": "Run evaluation", "experiment": "Experiment", "authExperiment": "Authentication regression agent upgrade", "judge": "Judge", "lastRun": "Last run", "gates": "Quality gates", "passed": "passed",
+    "modelComparison": "Candidate comparison", "sameDataset": "Same dataset · same tool access · mean of 3 runs", "metric": "Metric", "verdict": "Evaluation verdict", "recommended": "Recommended candidate", "verdictText": "Outperforms the baseline in tool selection, coverage, and bug detection; ready for the demo environment.", "watchItem": "Watch item", "watchText": "Coverage remains below the 85% gate. Add account-unlock boundaries before production use.", "promote": "Promote to demo", "runHistory": "Recent evaluation runs",
+    "hintRequirement": "Goals and constraints", "hintQuality": "Valid scenarios and assertions", "hintCoverage": "Requirements and risks", "bugDetection": "Bug detection", "hintBugs": "True defect recall", "toolAccuracy": "Tool accuracy", "hintTools": "Tool and argument accuracy", "hintCompletion": "End-to-end completion",
+    "gateCompletion": "Task completion", "gateEvidence": "Failure evidence linked", "gateHallucination": "Unsupported claim rate", "gateLatency": "Runtime", "gateCoverage": "Test coverage", "runStarted": "Evaluation run started", "promoted": "Agent v1.3 promoted to demo"
+  },
+  "trace": {
+    "back": "Back to test workspace",
+    "authenticationTest": "Authentication test",
+    "graph": "Graph",
+    "timeline": "Timeline",
+    "compare": "Compare trace",
+    "nodes": "Nodes",
+    "outline": "Trace outline",
+    "failureOnly": "Failure path only",
+    "criticalPath": "Critical path",
+    "live": "Live",
+    "failureIsolated": "Failure path isolated",
+    "rootCauseHypothesis": "root-cause hypothesis",
+    "linkedEvidence": "linked evidence",
+    "nodeDetail": "Node detail",
+    "summary": "Summary",
+    "input": "Input",
+    "output": "Output",
+    "goal": "Test goal",
+    "planning": "Planning",
+    "execution": "Execution",
+    "analysis": "Failure analysis",
+    "reporting": "Reporting",
+    "aiHypothesis": "AI root-cause hypothesis",
+    "validationMissing": "The request DTO may lack username length validation",
+    "hypothesisNotice": "This conclusion is inferred from evidence and has not been confirmed by a person or code inspection."
+  },
+  "tour": {
+    "title": "3-minute product tour", "open": "Demo tour", "skip": "Skip tour", "finish": "Finish tour",
+    "step1Title": "See what the Agent is doing", "step1Desc": "The workspace is a live execution surface, not a dashboard. The goal, plan, active step, and tool activity update together.", "step1Label": "Active task",
+    "step2Title": "Move from failure to evidence", "step2Desc": "When a response is unexpected, the Agent links the request, response, application log, and schema constraints instead of showing one error line.",
+    "step3Title": "Inspect decisions along the trace", "step3Desc": "The trace covers task understanding, tool calls, and failure analysis. AI hypotheses stay distinct from observed facts.",
+    "step4Title": "Use the report to decide", "step4Desc": "The report combines risk, coverage gaps, evidence-backed bugs, and Agent recommendations to support release decisions.", "step4Label": "Test verdict"
+  },
+  "settings": {
+    "title": "Settings",
+    "environment": "Environment",
+    "agentPolicy": "Agent Policy",
+    "models": "Models",
+    "evidence": "Evidence",
+    "saveChanges": "Save Changes",
+    "envName": "Environment Name",
+    "baseUrl": "Base URL",
+    "buildRef": "Build Reference",
+    "approval": "Require approval for destructive tools",
+    "healing": "Allow locator self-healing",
+    "redaction": "Evidence redaction",
+    "subtitle": "Configure the current project's runtime, agent access, model routing, and evidence policy.", "saved": "Saved", "saveSuccess": "Showcase settings saved",
+    "environmentDesc": "Runtime context used by agent tools and linked test evidence.", "agentDesc": "Define autonomous boundaries and high-risk operations that need human approval.", "modelsDesc": "Default model and fallback rules for planning, execution, and failure analysis.", "evidenceDesc": "Control retention and redaction for requests, responses, logs, and screenshots.",
+    "navEnvironment": "URL, build, connection", "navAgent": "Access and approvals", "navModels": "Primary and fallback", "navEvidence": "Redaction and retention", "timeout": "Request timeout", "connectionCheck": "Environment connection", "testConnection": "Check again",
+    "approvalDesc": "Database writes, resets, and production-like actions require confirmation.", "healingDesc": "Temporarily retry locator candidates above the confidence threshold.", "autoBug": "Create bug drafts automatically", "autoBugDesc": "Only when the failure is reproducible and evidence is complete.", "healingThreshold": "Locator healing threshold",
+    "primary": "Primary", "fallback": "Fallback", "fallbackRule": "Fallback on timeout or quota exhaustion", "redactionDesc": "Mask credentials, tokens, and configured sensitive fields.", "requestBodies": "Retain request and response bodies", "requestBodiesDesc": "Used for reproduction; redaction runs before storage.", "retention": "Evidence retention",
+    "effectiveScope": "Effective scope", "policyVersion": "Policy version", "lastChanged": "Last changed", "changedBy": "Changed by", "scopeNotice": "These settings only apply to this project's TEST environment."
+  }
+}

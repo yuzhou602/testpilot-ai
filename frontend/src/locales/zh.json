@@ -1,0 +1,473 @@
+{
+  "common": {
+    "appName": "TestPilot AI",
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "search": "搜索",
+    "filter": "筛选",
+    "export": "导出",
+    "import": "导入",
+    "refresh": "刷新",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "confirm": "确认",
+    "yes": "是",
+    "no": "否",
+    "ok": "确定",
+    "error": "错误",
+    "success": "成功",
+    "warning": "警告",
+    "info": "信息"
+    ,"close": "关闭"
+  },
+  "nav": {
+    "workspace": "工作台",
+    "apiTesting": "API 测试",
+    "uiTesting": "UI 测试",
+    "requirements": "需求",
+    "testCases": "测试用例",
+    "bugs": "缺陷",
+    "reports": "报告",
+    "evaluation": "AI 评测",
+    "settings": "设置",
+    "projects": "项目"
+    ,"runTest": "执行测试"
+  },
+  "shell": {
+    "workspaceGroup": "工作区",
+    "testingGroup": "测试",
+    "qualityGroup": "质量",
+    "agentGroup": "Agent",
+    "systemGroup": "系统",
+    "agentExecuting": "执行中",
+    "agentOnline": "系统就绪",
+    "runtimeConnected": "运行时已连接",
+    "collapse": "收起导航",
+    "expand": "展开导航",
+    "selectProject": "选择项目",
+    "notifications": "通知",
+    "activeModel": "当前模型",
+    "openNavigation": "打开导航",
+    "closeNavigation": "关闭导航",
+    "skipWorkspace": "跳转到工作区",
+    "traces": "追踪"
+    ,"moreTools": "更多工具", "openWorkspace": "打开 AI 测试工作台", "useLight": "使用浅色主题", "useDark": "使用深色主题", "userMenu": "打开用户菜单", "primaryNavigation": "主导航", "runtimeReachable": "Agent 运行时连接正常"
+  },
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出登录",
+    "username": "用户名",
+    "password": "密码",
+    "email": "邮箱",
+    "displayName": "显示名称",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "没有账号？",
+    "hasAccount": "已有账号？",
+    "loginSuccess": "登录成功",
+    "logoutSuccess": "退出成功",
+    "registerSuccess": "注册成功",
+    "heroTitle": "让测试 Agent 的每一步执行都有迹可循。", "heroDesc": "TestPilot AI 自主理解测试目标、规划用例、调用 API 与浏览器工具，并将每一个失败关联到可复现的证据。", "previewPlan": "生成测试计划", "previewExecute": "执行边界用例", "previewAnalyze": "关联失败证据", "previewReport": "生成测试报告", "previewEvidence": "正在关联 HTTP 响应、应用日志与字段约束……", "traceValue": "完整执行链路", "evidenceValue": "可复现失败证据", "healingValue": "定位器恢复决策",
+    "createAccount": "创建账户", "workspaceAccess": "工作区访问", "welcome": "进入 TestPilot", "registerHint": "创建一个本地演示账户。", "loginHint": "使用账号登录，或直接进入交互式产品演示。", "or": "或", "enterDemo": "进入产品演示", "demoHint": "无需账号 · 使用 ShopSphere 示例项目", "switchLogin": "已有账号？返回登录", "switchRegister": "没有账号？创建账户", "localNotice": "展示环境中的账号与演示数据仅保存在本地，不会发送到第三方服务。", "fillFields": "请填写用户名和密码", "loginFailed": "登录失败，请检查账号或直接进入演示"
+  },
+  "projects": {
+    "title": "项目", "subtitle": "选择测试上下文，检查环境与接口契约是否已准备就绪。", "newProject": "新建项目", "activeProject": "当前项目", "runtime": "运行环境", "lastExecution": "最近执行", "project": "项目", "environment": "环境", "sources": "测试来源", "latestRun": "最近运行", "readiness": "准备度", "noDescription": "未填写项目说明", "emptyTitle": "还没有测试项目", "emptyDesc": "连接一个测试环境，开始第一次 Agent 测试。", "createFirst": "创建第一个项目", "connectEnvironment": "连接测试环境", "connectEnvironmentDesc": "配置基础 URL 与安全凭证。", "importContract": "导入测试来源", "importContractDesc": "连接 OpenAPI、需求或浏览器入口。", "describeGoal": "描述测试目标", "describeGoalDesc": "Agent 将自动规划、执行并生成证据。", "createTitle": "创建测试项目", "projectName": "项目名称", "description": "项目说明", "baseUrl": "基础 URL", "nameRequired": "请输入项目名称", "created": "项目已创建"
+  },
+  "workspace": {
+    "title": "AI 测试工作台",
+    "subtitle": "描述你的测试目标，让 AI Agent 自动处理",
+    "tasks": "任务列表",
+    "agent": "Agent",
+    "context": "上下文",
+    "createTask": "创建任务",
+    "taskGoal": "任务目标",
+    "taskGoalPlaceholder": "例如：测试用户登录功能，包括正常流程、异常处理和安全性",
+    "execute": "执行",
+    "cancel": "取消任务",
+    "noTasks": "暂无任务",
+    "taskCreated": "任务创建成功",
+    "taskStarted": "任务开始执行",
+    "newTaskTitle": "你想测试什么？",
+    "newTaskHint": "描述测试目标，Agent 将自主规划、执行并分析结果。",
+    "steps": "步骤",
+    "mission": "测试目标",
+    "missionComplete": "任务完成度",
+    "agentFocus": "当前执行",
+    "investigating": "正在分析失败断言",
+    "boundaryTest": "边界测试 · 用户名长度 500",
+    "failureAnalysis": "失败分析",
+    "executionPlan": "执行计划",
+    "liveActivity": "实时活动",
+    "events": "条事件",
+    "continuePlaceholder": "让 Agent 继续执行任务…",
+    "overview": "概览",
+    "evidence": "证据",
+    "environment": "环境"
+    ,"newTest": "新建测试"
+    ,"quickStart": "快速演示"
+    ,"demoMode": "快速演示模式"
+    ,"startTest": "开始测试"
+    ,"starting": "正在启动…"
+    ,"toStart": "启动"
+    ,"noProject": "未选择项目"
+    ,"openapiConnected": "OpenAPI 已连接"
+    ,"flowUnderstand": "理解目标"
+    ,"flowPlan": "生成计划"
+    ,"flowExecute": "执行测试"
+    ,"flowEvidence": "生成证据"
+    ,"presetLogin": "登录模块全面测试"
+    ,"presetLoginGoal": "全面测试用户登录模块，重点检查异常输入、账户锁定、Token 和 SQL 注入。"
+    ,"presetApi": "API 异常与边界测试"
+    ,"presetApiGoal": "测试认证 API 的异常输入和边界条件，并分析所有非预期响应。"
+    ,"presetUi": "UI 登录流程与定位器恢复"
+    ,"presetUiGoal": "执行完整 UI 登录流程；当元素定位失败时尝试自愈并保留证据。"
+    ,"unexpectedResponse": "非预期响应"
+    ,"collectingEvidence": "正在关联响应、应用日志与字段约束，判断失败是否可稳定复现。"
+    ,"viewEvidence": "查看证据"
+    ,"openTrace": "打开 Trace"
+    ,"filterAll": "全部"
+    ,"filterFailure": "失败"
+    ,"filterBrowser": "浏览器"
+    ,"progress": "执行进度"
+    ,"tests": "测试结果"
+    ,"pass": "通过"
+    ,"fail": "失败"
+    ,"total": "总计"
+    ,"duration": "耗时"
+    ,"result": "结果摘要"
+    ,"viewFullTrace": "查看完整 Trace"
+    ,"currentEvidence": "当前证据", "executionFlow": "测试执行流程", "openFullTrace": "打开完整 Trace", "replayDemo": "重新播放演示任务", "resumeTask": "继续任务", "pauseTask": "暂停任务", "stopTask": "停止任务", "noTaskSelected": "未选择任务"
+    ,"applicationLog": "应用日志"
+    ,"openEvidenceInTrace": "在 Trace 中查看证据"
+  },
+  "agent": {
+    "status": "Agent 状态",
+    "running": "运行中",
+    "completed": "已完成",
+    "failed": "失败",
+    "pending": "等待中",
+    "thinking": "思考中...",
+    "plan": "测试计划",
+    "steps": "执行步骤",
+    "step": "步骤",
+    "tool": "工具",
+    "result": "结果",
+    "error": "错误",
+    "latency": "延迟",
+    "tokens": "Token 消耗",
+    "retries": "重试次数"
+  },
+  "apiTesting": {
+    "title": "API 测试 IDE",
+    "method": "请求方法",
+    "url": "请求地址",
+    "urlPlaceholder": "输入请求 URL",
+    "params": "参数",
+    "headers": "请求头",
+    "body": "请求体",
+    "auth": "认证",
+    "send": "发送请求",
+    "response": "响应结果",
+    "status": "状态码",
+    "time": "耗时",
+    "size": "大小"
+    ,"endpoints": "API 接口"
+    ,"importHint": "导入 OpenAPI 定义后开始测试"
+    ,"requestWorkbench": "请求工作区"
+    ,"authenticateUser": "用户身份认证"
+    ,"selectEndpoint": "请选择一个接口"
+    ,"coverageGaps": "项覆盖缺口"
+    ,"sending": "发送中…"
+    ,"runWithAgent": "智能执行"
+    ,"request": "请求"
+    ,"responseReady": "响应通道已就绪"
+    ,"responseHint": "发送当前请求，或将接口交给 Agent 执行完整测试。"
+    ,"contractMatched": "响应符合接口契约"
+    ,"agentAnalysis": "Agent 测试建议"
+    ,"gaps": "项缺口"
+    ,"description": "接口说明"
+    ,"requestSchema": "请求结构"
+    ,"generateAndRun": "生成并执行 5 个测试"
+    ,"useRequestContext": "使用当前请求作为测试上下文"
+    ,"emptyUsername": "用户名为空"
+    ,"requiredBoundary": "边界测试 · 必填字段"
+    ,"maxPassword": "密码最大长度"
+    ,"schemaBoundary": "边界测试 · Schema 限制"
+    ,"sqlInjection": "SQL 注入载荷"
+    ,"inputSecurity": "安全测试 · 输入处理"
+    ,"xssPayload": "XSS 攻击载荷"
+    ,"outputSecurity": "安全测试 · 输出编码"
+    ,"wrongCredentials": "错误登录凭证"
+    ,"errorContract": "异常路径 · 响应契约"
+  },
+  "uiTesting": {
+    "title": "UI 测试",
+    "steps": "测试步骤",
+    "browser": "浏览器预览",
+    "inspector": "元素检查器",
+    "selfHealing": "自愈功能",
+    "addStep": "添加步骤",
+    "record": "录制",
+    "play": "播放",
+    "pause": "暂停",
+    "stepAction": "操作",
+    "stepSelector": "选择器",
+    "stepValue": "值"
+    ,"run": "运行"
+    ,"running": "运行中…"
+    ,"stop": "停止"
+    ,"liveBrowser": "实时浏览器"
+    ,"healingActive": "定位器自愈中"
+    ,"emptyBrowser": "运行 UI 测试后将在这里显示浏览器画面"
+    ,"secureLogin": "安全登录"
+    ,"status": "状态"
+    ,"locatorHealing": "定位器自愈"
+    ,"recoveryTrace": "恢复轨迹"
+    ,"before": "修复前 · 原始定位器"
+    ,"after": "修复后 · 候选定位器"
+    ,"elementNotFound": "未找到元素"
+    ,"textEvidence": "可见文本"
+    ,"confidence": "置信度"
+    ,"accessibleRole": "可访问角色"
+    ,"visibleText": "可见文本"
+    ,"position": "位置"
+    ,"historyMatch": "历史匹配"
+    ,"decision": "执行决策"
+    ,"useCandidate": "本次运行采用候选定位器"
+    ,"decisionReason": "角色、可见文本与 DOM 位置一致；永久更新仍需人工确认。"
+    ,"recovered": "执行已恢复"
+    ,"keepRunOnly": "仅用于本次运行"
+    ,"proposeUpdate": "提议更新定位器"
+    ,"stepNavigate": "打开登录页面"
+    ,"stepFindUsername": "定位用户名输入框"
+    ,"stepFillUsername": "填写用户名"
+    ,"stepFindPassword": "定位密码输入框"
+    ,"stepFillPassword": "填写密码"
+    ,"stepClickLogin": "点击登录按钮"
+    ,"stepHealing": "执行定位器自愈"
+    ,"stepAssertDashboard": "验证登录结果"
+    ,"runCompleted": "UI 测试完成 · 定位器已通过证据恢复"
+    ,"runStopped": "UI 执行已停止 · 已采集证据得到保留"
+    ,"runOnlySaved": "恢复后的定位器仅用于本次运行"
+    ,"updateProposed": "已附带证据提交定位器更新建议，等待审核"
+  },
+  "requirements": {
+    "title": "需求管理",
+    "addRequirement": "添加需求",
+    "coverage": "覆盖率",
+    "rules": "需求规则",
+    "noRequirements": "暂无需求",
+    "source": "来源",
+    "riskLevel": "风险等级",
+    "status": "状态"
+    ,"review": "需求评审"
+    ,"covered": "已覆盖"
+    ,"gap": "项缺口"
+    ,"businessRules": "业务规则"
+    ,"tests": "个测试"
+    ,"aiCoverage": "AI 覆盖分析"
+    ,"evidenceRequired": "需要测试证据"
+    ,"missingCoverage": "缺失覆盖"
+    ,"generateBeforeRelease": "发布前应补充边界测试证据"
+    ,"fullyCovered": "该需求已经完整覆盖，当前无需增加测试。"
+    ,"boundaryProposed": "Agent 建议的边界集合"
+    ,"generateMissing": "生成缺失测试"
+    ,"overallCoverage": "总体覆盖率"
+    ,"rulesNeedEvidence": "条业务规则需要证据"
+    ,"releaseSignal": "发布风险"
+    ,"mediumRisk": "中等风险"
+    ,"unlockUnverified": "账户解锁边界仍未验证。"
+    ,"demoTitle1": "登录必须提供用户名和密码"
+    ,"demoTitle2": "连续五次失败后锁定账户"
+    ,"demoTitle3": "访问 Token 生命周期"
+    ,"demoDescription": "连续五次输入错误密码后账户锁定 30 分钟。"
+    ,"ruleR3": "第五次登录失败时立即触发账户锁定"
+    ,"ruleR4": "账户在 30 分钟后自动解除锁定"
+    ,"coverageComplete": "该需求的测试覆盖已经完整"
+    ,"generatedBoundary": "已生成 {count} 个边界测试，覆盖率已更新"
+  },
+  "testCases": {
+    "title": "测试用例",
+    "addTestCase": "添加用例",
+    "noTestCases": "暂无用例",
+    "caseCode": "用例编号",
+    "title2": "标题",
+    "testType": "测试类型",
+    "strategy": "测试策略",
+    "priority": "优先级",
+    "automated": "自动化",
+    "aiGenerated": "AI 生成"
+    ,"searchCases": "搜索测试用例…"
+    ,"runSelected": "执行所选"
+    ,"aiGenerate": "AI 生成"
+    ,"cases": "个用例"
+    ,"coverage": "覆盖率"
+    ,"scenario": "测试场景"
+    ,"requirement": "关联需求"
+    ,"risk": "风险"
+    ,"automation": "自动化"
+    ,"lastResult": "最近结果"
+    ,"selectedStarted": "已将 {count} 个测试用例交给 Agent 执行"
+    ,"alreadyIncluded": "AI 生成的覆盖用例已经存在"
+    ,"generatedFromGap": "已根据覆盖缺口生成 1 个高风险边界用例"
+    ,"demoTitle1": "有效用户名和密码登录成功"
+    ,"demoDesc1": "认证模块正常流程"
+    ,"demoTitle2": "空密码应被拒绝"
+    ,"demoDesc2": "必填字段边界验证"
+    ,"demoTitle3": "第五次密码错误触发账户锁定"
+    ,"demoDesc3": "失败次数阈值状态转换"
+    ,"demoTitle4": "用户名长度为 500"
+    ,"demoDesc4": "最大长度边界触发服务端异常"
+    ,"demoTitle5": "SQL 注入载荷应被拒绝"
+    ,"demoDesc5": "身份认证输入安全测试"
+    ,"typeApi": "API"
+    ,"typeBoundary": "边界"
+    ,"typeState": "状态"
+    ,"typeSecurity": "安全"
+  },
+  "bugs": {
+    "title": "缺陷中心",
+    "addBug": "添加缺陷",
+    "noBugs": "暂无缺陷",
+    "bugId": "缺陷 ID",
+    "title2": "标题",
+    "severity": "严重程度",
+    "status": "状态",
+    "module": "模块",
+    "rootCause": "根因分析",
+    "confidence": "置信度",
+    "fix": "修复建议"
+    ,"defects": "个缺陷"
+    ,"highConfidence": "个高置信度"
+    ,"observedFact": "已观测事实"
+    ,"linkedEvidence": "关联证据"
+    ,"aiHypothesis": "AI 推测"
+    ,"reproduced": "次复现"
+    ,"expectedContract": "预期结果 · 接口契约"
+    ,"actualObserved": "实际结果 · 运行观测"
+    ,"reproductionSteps": "复现步骤"
+    ,"aiRootCause": "AI 根因推测"
+    ,"unconfirmed": "尚未确认 · 执行前需审核"
+    ,"hypothesis": "推测结论"
+    ,"suspectedModule": "疑似模块"
+    ,"demoBug1": "用户名超过 255 个字符时接口返回 500"
+    ,"demoBug2": "账户锁定响应泄露剩余锁定时间"
+    ,"demoHypothesis": "请求 DTO 可能缺少用户名长度上限校验。"
+    ,"demoExpected": "返回 400，并提供明确的字段校验信息"
+    ,"demoActual": "返回 500 Internal Server Error"
+    ,"demoSteps": "1. 打开 POST /api/auth/login\n2. 将 username 长度设置为 500\n3. 发送请求"
+  },
+  "reports": {
+    "title": "测试报告",
+    "noReports": "暂无报告",
+    "passRate": "通过率",
+    "totalTests": "总用例数",
+    "passed": "通过",
+    "failed": "失败",
+    "coverage": "覆盖率",
+    "generateReport": "生成报告"
+    ,"exportPdf": "导出 PDF"
+    ,"share": "分享报告"
+    ,"execution": "执行进度"
+    ,"demoTitle": "认证模块综合测试"
+    ,"demoSummary": "登录核心流程稳定，但输入校验缺口导致两项可稳定复现的失败；在 500 响应修复前，发布风险保持中等。"
+    ,"riskAssessment": "风险评估"
+    ,"coverageGaps": "覆盖缺口"
+    ,"evidenceBugs": "证据型缺陷"
+    ,"demoRisk": "中等风险 · 输入校验是当前主要风险区域"
+    ,"demoCoverageGap": "总体覆盖率 84%；缺少账户锁定 29 / 30 / 31 分钟边界证据"
+    ,"demoBugs": "1 个主要缺陷，1 个次要缺陷，均有关联证据"
+    ,"aiRecommendations": "AI 建议"
+    ,"demoRecommendations": "增加 DTO 长度校验，补充 Token 过期测试，并生成 29 / 30 / 31 分钟账户解锁边界用例。"
+    ,"keyFindings": "关键发现"
+    ,"signals": "项信号"
+    ,"findingValidation": "输入长度校验失败"
+    ,"findingValidationDetail": "使用 500 字符用户名可稳定复现 500 响应。"
+    ,"findingLockout": "账户锁定边界覆盖不完整"
+    ,"findingLockoutDetail": "29 / 30 / 31 分钟恢复行为暂无测试证据。"
+    ,"findingStable": "登录核心流程稳定"
+    ,"findingStableDetail": "正常登录与错误凭证处理结果保持稳定。"
+    ,"coverageMap": "覆盖分布"
+    ,"overall": "总体"
+    ,"authentication": "身份认证"
+    ,"accountLockout": "账户锁定"
+    ,"tokenLifecycle": "Token 生命周期"
+    ,"openEvidenceTrace": "查看证据 Trace"
+  },
+  "evaluation": {
+    "title": "AI 评测",
+    "noEvaluations": "暂无评测",
+    "model": "模型",
+    "promptVersion": "Prompt 版本",
+    "scores": "评分",
+    "requirementScore": "需求理解",
+    "testCaseScore": "用例质量",
+    "coverageScore": "覆盖率",
+    "completionScore": "完成度",
+    "subtitle": "在同一测试集上比较 Agent 版本，检查质量门禁后再决定是否发布。",
+    "run": "运行评测", "experiment": "实验", "authExperiment": "认证回归 Agent 升级评测", "judge": "评审器", "lastRun": "最近运行", "gates": "质量门禁", "passed": "通过",
+    "modelComparison": "候选版本对比", "sameDataset": "相同数据集 · 相同工具权限 · 三次运行均值", "metric": "评测指标", "verdict": "评测结论", "recommended": "推荐候选", "verdictText": "在工具选择、覆盖率与缺陷发现上均优于基线，可进入演示环境。", "watchItem": "需关注", "watchText": "覆盖率仍低于 85% 门禁，建议补齐账户解锁边界后再用于生产。", "promote": "发布至演示环境", "runHistory": "最近评测运行",
+    "hintRequirement": "目标与约束识别", "hintQuality": "有效场景与断言", "hintCoverage": "需求与风险覆盖", "bugDetection": "缺陷发现", "hintBugs": "真实缺陷召回", "toolAccuracy": "工具选择", "hintTools": "工具与参数正确率", "hintCompletion": "端到端任务完成",
+    "gateCompletion": "任务完成率", "gateEvidence": "失败证据关联", "gateHallucination": "无依据结论率", "gateLatency": "运行时长", "gateCoverage": "测试覆盖率", "runStarted": "评测任务已启动", "promoted": "Agent v1.3 已发布至演示环境"
+  },
+  "trace": {
+    "back": "返回测试工作台",
+    "authenticationTest": "认证模块测试",
+    "graph": "关系图",
+    "timeline": "时间线",
+    "compare": "对比 Trace",
+    "nodes": "节点",
+    "outline": "Trace 结构",
+    "failureOnly": "仅显示失败路径",
+    "criticalPath": "关键路径",
+    "live": "实时",
+    "failureIsolated": "失败路径已定位",
+    "rootCauseHypothesis": "根因推测",
+    "linkedEvidence": "条关联证据",
+    "nodeDetail": "节点详情",
+    "summary": "摘要",
+    "input": "输入",
+    "output": "输出",
+    "goal": "测试目标",
+    "planning": "测试规划",
+    "execution": "执行测试",
+    "analysis": "失败分析",
+    "reporting": "生成报告",
+    "aiHypothesis": "AI 根因推测",
+    "validationMissing": "请求 DTO 可能缺少用户名长度校验",
+    "hypothesisNotice": "该结论由证据推断，尚未被人工或代码检查确认。"
+  },
+  "tour": {
+    "title": "3 分钟产品导览", "open": "演示导览", "skip": "跳过导览", "finish": "完成导览",
+    "step1Title": "先看 Agent 当前在做什么", "step1Desc": "工作台不是数据看板，而是实时任务执行区。测试目标、计划、当前步骤和工具活动会同时更新。", "step1Label": "当前任务",
+    "step2Title": "从失败直接定位证据", "step2Desc": "遇到非预期响应时，Agent 会关联请求响应、应用日志和字段约束，而不是只给出一条错误消息。",
+    "step3Title": "沿 Trace 检查 Agent 决策", "step3Desc": "Trace 展示从任务理解、工具调用到失败分析的完整链路；AI 推测与已观察事实会明确区分。",
+    "step4Title": "用报告决定下一步", "step4Desc": "报告汇总风险、覆盖缺口、证据型缺陷与 Agent 建议，帮助判断是否适合发布。", "step4Label": "测试结论"
+  },
+  "settings": {
+    "title": "设置",
+    "environment": "环境配置",
+    "agentPolicy": "Agent 策略",
+    "models": "模型配置",
+    "evidence": "证据处理",
+    "saveChanges": "保存更改",
+    "envName": "环境名称",
+    "baseUrl": "基础 URL",
+    "buildRef": "构建引用",
+    "approval": "危险操作需要审批",
+    "healing": "允许定位器自愈",
+    "redaction": "证据脱敏",
+    "subtitle": "配置当前项目的执行环境、Agent 权限、模型路由与证据策略。", "saved": "已保存", "saveSuccess": "演示配置已保存",
+    "environmentDesc": "Agent 工具执行与测试证据关联使用的运行上下文。", "agentDesc": "定义自主执行边界，以及需要人工确认的高风险操作。", "modelsDesc": "规划、执行和失败分析使用的默认模型与回退规则。", "evidenceDesc": "控制请求、响应、日志与截图证据的保留和脱敏方式。",
+    "navEnvironment": "URL、构建与连接", "navAgent": "权限与人工审批", "navModels": "主模型与回退", "navEvidence": "脱敏与保留周期", "timeout": "请求超时", "connectionCheck": "环境连接检查", "testConnection": "重新检查",
+    "approvalDesc": "数据库写入、环境重置与生产类操作执行前必须确认。", "healingDesc": "允许临时使用超过置信度阈值的候选 Locator 重试。", "autoBug": "自动生成缺陷草稿", "autoBugDesc": "只有失败可复现且证据完整时才创建草稿。", "healingThreshold": "Locator 自愈阈值",
+    "primary": "主模型", "fallback": "回退模型", "fallbackRule": "超时或配额不足时自动回退", "redactionDesc": "自动遮盖凭证、Token 与配置的敏感字段。", "requestBodies": "保留请求与响应正文", "requestBodiesDesc": "用于失败复现；脱敏规则会在保存前执行。", "retention": "证据保留周期",
+    "effectiveScope": "当前生效范围", "policyVersion": "策略版本", "lastChanged": "最近修改", "changedBy": "修改人", "scopeNotice": "这些设置仅应用于当前项目的 TEST 环境，不影响其他项目。"
+  }
+}

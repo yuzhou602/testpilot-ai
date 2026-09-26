@@ -1,0 +1,16 @@
+package com.testpilot.common.enums;
+
+public enum TestStrategy {
+    EQUIVALENCE_PARTITION,
+    BOUNDARY_VALUE,
+    SCENARIO_BASED,
+    STATE_TRANSITION,
+    DECISION_TABLE,
+    ERROR_GUESSING,
+    ORTHOGONAL,
+    EXCEPTION_TEST,
+    PERMISSION_TEST,
+    API_TEST,
+    UI_TEST,
+    REGRESSION_TEST
+}
