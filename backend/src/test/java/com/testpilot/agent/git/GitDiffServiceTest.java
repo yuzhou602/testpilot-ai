@@ -12,6 +12,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -26,11 +27,21 @@ class GitDiffServiceTest {
     @Mock
     private ChatClient chatClient;
 
+    @Mock
+    private ChatClient.ChatClientRequestSpec requestSpec;
+
+    @Mock
+    private ChatClient.CallResponseSpec callResponseSpec;
+
     private String testDiff;
 
     @BeforeEach
     void setUp() {
-        when(chatClientBuilder.build()).thenReturn(chatClient);
+        lenient().when(chatClientBuilder.build()).thenReturn(chatClient);
+        lenient().when(chatClient.prompt()).thenReturn(requestSpec);
+        lenient().when(requestSpec.system(any(String.class))).thenReturn(requestSpec);
+        lenient().when(requestSpec.user(any(String.class))).thenReturn(requestSpec);
+        lenient().when(requestSpec.call()).thenReturn(callResponseSpec);
         testDiff = """
                 diff --git a/src/main/java/com/example/UserService.java b/src/main/java/com/example/UserService.java
                 index 1234567..abcdefg 100644
@@ -59,11 +70,7 @@ class GitDiffServiceTest {
 
     @Test
     void shouldAnalyzeDiff() {
-        when(chatClient.prompt()).thenReturn(chatClient);
-        when(chatClient.system(any())).thenReturn(chatClient);
-        when(chatClient.user(any())).thenReturn(chatClient);
-        when(chatClient.call()).thenReturn(chatClient);
-        when(chatClient.content()).thenReturn("""
+        when(callResponseSpec.content()).thenReturn("""
                 {
                     "summary": "Added null check for user login",
                     "affectedModules": ["UserService", "Authentication"],
@@ -102,11 +109,7 @@ class GitDiffServiceTest {
                 .breakingChanges(List.of())
                 .build();
 
-        when(chatClient.prompt()).thenReturn(chatClient);
-        when(chatClient.system(any())).thenReturn(chatClient);
-        when(chatClient.user(any())).thenReturn(chatClient);
-        when(chatClient.call()).thenReturn(chatClient);
-        when(chatClient.content()).thenReturn("""
+        when(callResponseSpec.content()).thenReturn("""
                 {
                     "testCases": [
                         {

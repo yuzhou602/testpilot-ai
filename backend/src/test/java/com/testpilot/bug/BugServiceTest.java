@@ -99,11 +99,12 @@ class BugServiceTest {
 
     @Test
     void shouldGetBugStats() {
-        when(bugRepository.countByProjectId(1L)).thenReturn(10L);
-        when(bugRepository.countByProjectIdAndSeverity(1L, BugSeverity.CRITICAL)).thenReturn(2L);
+        when(bugRepository.findByProjectIdOrderByCreatedAtDesc(1L)).thenReturn(List.of(testBug));
 
         var stats = bugService.getBugStats(1L);
 
         assertNotNull(stats);
+        assertEquals(1, stats.get("total"));
+        assertEquals(1L, stats.get("critical"));
     }
 }

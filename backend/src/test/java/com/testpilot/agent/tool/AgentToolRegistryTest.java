@@ -2,24 +2,18 @@ package com.testpilot.agent.tool;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.junit.jupiter.MockitoExtension;
-
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(MockitoExtension.class)
 class AgentToolRegistryTest {
 
-    @InjectMocks
     private AgentToolRegistry registry;
 
     @BeforeEach
     void setUp() {
-        // Register a test tool
-        registry.register(new AgentTool() {
+        AgentTool testTool = new AgentTool() {
             @Override
             public String getName() {
                 return "testTool";
@@ -39,7 +33,8 @@ class AgentToolRegistryTest {
             public ToolResult execute(ToolContext context, Map<String, Object> args) {
                 return ToolResult.ok("Test result", null);
             }
-        });
+        };
+        registry = new AgentToolRegistry(List.of(testTool));
     }
 
     @Test
@@ -50,9 +45,8 @@ class AgentToolRegistryTest {
     }
 
     @Test
-    void shouldReturnNullForUnknownTool() {
-        AgentTool tool = registry.getTool("unknownTool");
-        assertNull(tool);
+    void shouldRejectUnknownTool() {
+        assertThrows(IllegalArgumentException.class, () -> registry.getTool("unknownTool"));
     }
 
     @Test

@@ -1,5 +1,6 @@
 package com.testpilot.requirement;
 
+import com.testpilot.common.enums.RiskLevel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -38,7 +39,7 @@ class RequirementServiceTest {
                 .description("User authentication with username and password")
                 .source("MANUAL")
                 .status("ACTIVE")
-                .riskLevel("HIGH")
+                .riskLevel(RiskLevel.HIGH)
                 .coverageScore(85.0)
                 .build();
     }

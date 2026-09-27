@@ -4,6 +4,7 @@ import com.testpilot.agent.AgentTask;
 import com.testpilot.agent.AgentTaskRepository;
 import com.testpilot.agent.memory.ChatMemoryService;
 import com.testpilot.agent.planner.AgentPlan;
+import com.testpilot.common.enums.AgentTaskStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -112,8 +113,14 @@ class MultiAgentOrchestratorTest {
                         .build());
 
         when(reviewerAgent.analyzeFailure(any(), any(), any(), any(), any()))
-                .thenReturn(new com.testpilot.agent.runtime.FailureAnalyzer.FailureAnalysis(
-                        "TEST_ERROR", "Test error", "Evidence", 0.8, false, false, null));
+                .thenReturn(com.testpilot.agent.runtime.FailureAnalyzer.FailureAnalysis.builder()
+                        .failureType("TEST_ERROR")
+                        .rootCause("Test error")
+                        .evidence("Evidence")
+                        .confidence(0.8)
+                        .shouldRetry(false)
+                        .createBug(false)
+                        .build());
 
         MultiAgentOrchestrator.OrchestratorResult result = orchestrator.execute(testTask);
 

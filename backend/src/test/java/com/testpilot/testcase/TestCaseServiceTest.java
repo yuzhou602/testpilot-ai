@@ -1,5 +1,7 @@
 package com.testpilot.testcase;
 
+import com.testpilot.common.enums.TestStrategy;
+import com.testpilot.common.enums.TestType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -42,8 +44,8 @@ class TestCaseServiceTest {
                 .steps("1. Send POST /api/auth/login with valid credentials")
                 .expectedResult("{\"status\": 200}")
                 .testData("{\"username\": \"testuser\", \"password\": \"Test@123\"}")
-                .testType("API")
-                .strategy("EQUIVALENCE_PARTITION")
+                .testType(TestType.API)
+                .strategy(TestStrategy.EQUIVALENCE_PARTITION)
                 .priority(1)
                 .automated(true)
                 .aiGenerated(true)

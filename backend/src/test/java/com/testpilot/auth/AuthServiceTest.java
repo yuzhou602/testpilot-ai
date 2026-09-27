@@ -24,6 +24,12 @@ class AuthServiceTest {
     private UserRepository userRepository;
 
     @Mock
+    private RefreshTokenRepository refreshTokenRepository;
+
+    @Mock
+    private UserSettingsRepository userSettingsRepository;
+
+    @Mock
     private PasswordEncoder passwordEncoder;
 
     @Mock
@@ -51,8 +57,7 @@ class AuthServiceTest {
 
         when(userRepository.findByUsername("testuser")).thenReturn(Optional.of(testUser));
         when(passwordEncoder.matches("password", "$2a$10$encoded")).thenReturn(true);
-        when(jwtUtil.generateAccessToken(any())).thenReturn("access-token");
-        when(jwtUtil.generateRefreshToken(any())).thenReturn("refresh-token");
+        when(jwtUtil.generateToken(1L, "testuser")).thenReturn("access-token");
 
         AuthResponse response = authService.login(request);
 
@@ -79,7 +84,7 @@ class AuthServiceTest {
         request.setEmail("new@example.com");
         request.setDisplayName("New User");
 
-        when(userRepository.findByUsername("newuser")).thenReturn(Optional.empty());
+        when(userRepository.existsByUsername("newuser")).thenReturn(false);
         when(passwordEncoder.encode("password")).thenReturn("$2a$10$encoded");
         when(userRepository.save(any())).thenReturn(testUser);
 

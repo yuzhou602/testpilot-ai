@@ -35,9 +35,20 @@ class RagServiceTest {
     @Mock
     private ChatClient chatClient;
 
+    @Mock
+    private ChatClient.ChatClientRequestSpec requestSpec;
+
+    @Mock
+    private ChatClient.CallResponseSpec callResponseSpec;
+
     @BeforeEach
     void setUp() {
         when(chatClientBuilder.build()).thenReturn(chatClient);
+        when(chatClient.prompt()).thenReturn(requestSpec);
+        when(requestSpec.system(any(String.class))).thenReturn(requestSpec);
+        when(requestSpec.user(any(String.class))).thenReturn(requestSpec);
+        when(requestSpec.call()).thenReturn(callResponseSpec);
+        when(callResponseSpec.content()).thenReturn("0.1,0.2,0.3");
     }
 
     @Test
@@ -49,7 +60,7 @@ class RagServiceTest {
                 .projectId(1L)
                 .category("test_method")
                 .content("SQL Injection Testing: Use parameterized queries")
-                .embedding(new float[1536])
+                .embedding(testEmbedding())
                 .build();
 
         when(embeddingRepository.findSimilar(any(), any(), any())).thenReturn(Arrays.asList(embedding));
@@ -70,23 +81,11 @@ class RagServiceTest {
                 .build();
 
         when(knowledgeBaseService.findByCategory(1L, null)).thenReturn(Arrays.asList(knowledge));
-        when(chatClient.prompt()).thenReturn(chatClient);
-        when(chatClient.system(any())).thenReturn(chatClient);
-        when(chatClient.user(any())).thenReturn(chatClient);
-        when(chatClient.call()).thenReturn(chatClient);
-        when(chatClient.content()).thenReturn("0.1,0.2,0.3");
-
         assertDoesNotThrow(() -> ragService.indexKnowledge(1L));
     }
 
     @Test
     void shouldAddDocument() {
-        when(chatClient.prompt()).thenReturn(chatClient);
-        when(chatClient.system(any())).thenReturn(chatClient);
-        when(chatClient.user(any())).thenReturn(chatClient);
-        when(chatClient.call()).thenReturn(chatClient);
-        when(chatClient.content()).thenReturn("0.1,0.2,0.3");
-
         assertDoesNotThrow(() -> ragService.addDocument(1L, "test_method", "Test content", "manual"));
     }
 
@@ -99,7 +98,7 @@ class RagServiceTest {
                 .projectId(1L)
                 .category("test_method")
                 .content("Login Testing: Test with valid and invalid credentials")
-                .embedding(new float[1536])
+                .embedding(testEmbedding())
                 .build();
 
         when(embeddingRepository.findSimilar(any(), any(), any())).thenReturn(Arrays.asList(embedding));
@@ -108,5 +107,13 @@ class RagServiceTest {
 
         assertNotNull(context);
         assertTrue(context.contains("Relevant Knowledge"));
+    }
+
+    private float[] testEmbedding() {
+        float[] embedding = new float[1536];
+        embedding[0] = 0.1f;
+        embedding[1] = 0.2f;
+        embedding[2] = 0.3f;
+        return embedding;
     }
 }
