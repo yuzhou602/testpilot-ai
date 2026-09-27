@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Build & Repository
+- Fixed backend compilation blockers caused by missing Lombok imports, conflicting MVC/WebFlux CORS imports, stale OpenAPI parser types, and an unavailable vector mapping annotation.
 - Corrected the Swagger Parser Maven coordinates so backend dependencies resolve in GitHub Actions and fresh local environments.
 - Reduced the largest frontend JavaScript chunk from 833.94 kB to 191.05 kB by replacing the remaining package-level Element Plus import and separating the icon cache chunk.
 - Added GitHub Actions CI for the Vue production build, ten-route browser smoke test, and Java unit tests.

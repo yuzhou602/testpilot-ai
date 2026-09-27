@@ -3,7 +3,6 @@ package com.testpilot.agent.rag;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Type;
 
 import java.time.LocalDateTime;
 
@@ -29,7 +28,6 @@ public class KnowledgeEmbedding {
     private String content;
 
     @Column(columnDefinition = "vector(1536)")
-    @Type(dev.alejo.embedding.type.VectorType.class)
     private float[] embedding;
 
     @Column(length = 200)

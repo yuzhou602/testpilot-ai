@@ -2,6 +2,8 @@ package com.testpilot.agent.runtime;
 
 import com.testpilot.agent.tool.AgentTool;
 import com.testpilot.agent.tool.AgentToolRegistry;
+import lombok.Builder;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
