@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Build & Repository
+- Reused the configured Jackson mapper in the multi-agent executor and converted serialization failures into actionable runtime errors.
 - Restored missing test-case and bug service operations, modernized HTTP method parsing, and corrected state-machine and OpenAPI generic compatibility issues.
 - Fixed backend compilation blockers caused by missing Lombok imports, conflicting MVC/WebFlux CORS imports, stale OpenAPI parser types, and an unavailable vector mapping annotation.
 - Corrected the Swagger Parser Maven coordinates so backend dependencies resolve in GitHub Actions and fresh local environments.

@@ -1,5 +1,7 @@
 package com.testpilot.agent.multi;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.testpilot.agent.AgentTask;
 import com.testpilot.agent.AgentStep;
 import com.testpilot.agent.AgentStepRepository;
@@ -21,6 +23,7 @@ public class ExecutorAgent {
 
     private final StepExecutor stepExecutor;
     private final AgentStepRepository stepRepository;
+    private final ObjectMapper objectMapper;
 
     public StepResult executeStep(AgentTask task, AgentPlan plan, int stepIndex, AgentContext context) {
         log.info("ExecutorAgent: Executing step {} for task {}", stepIndex, task.getId());
@@ -36,7 +39,7 @@ public class ExecutorAgent {
                 .stepType((String) stepDef.getOrDefault("stepType", "execute"))
                 .toolName(toolName)
                 .status(StepStatus.RUNNING)
-                .input(objectMapper().writeValueAsString(stepDef))
+                .input(toJson(stepDef))
                 .build();
         step = stepRepository.save(step);
 
@@ -51,7 +54,7 @@ public class ExecutorAgent {
             StepExecutor.StepResult result = stepExecutor.execute(toolName, toolInput, ctx);
 
             step.setStatus(StepStatus.COMPLETED);
-            step.setOutput(objectMapper().writeValueAsString(result));
+            step.setOutput(toJson(result));
             step.setLatencyMs(result.getLatencyMs());
             step.setCompletedAt(java.time.LocalDateTime.now());
             stepRepository.save(step);
@@ -89,8 +92,12 @@ public class ExecutorAgent {
         return Map.of();
     }
 
-    private com.fasterxml.jackson.databind.ObjectMapper objectMapper() {
-        return new com.fasterxml.jackson.databind.ObjectMapper();
+    private String toJson(Object value) {
+        try {
+            return objectMapper.writeValueAsString(value);
+        } catch (JsonProcessingException e) {
+            throw new IllegalArgumentException("Unable to serialize Agent step data", e);
+        }
     }
 
     @lombok.Data
