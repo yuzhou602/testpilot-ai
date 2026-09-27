@@ -11,23 +11,23 @@ import java.util.Set;
 @Component
 public class AgentStateMachine {
 
-    private static final Map<AgentTaskStatus, Set<AgentTaskStatus>> TRANSITIONS = Map.of(
-            AgentTaskStatus.CREATED, Set.of(AgentTaskStatus.ANALYZING, AgentTaskStatus.CANCELLED),
-            AgentTaskStatus.ANALYZING, Set.of(AgentTaskStatus.PLANNING, AgentTaskStatus.FAILED, AgentTaskStatus.CANCELLED),
-            AgentTaskStatus.PLANNING, Set.of(AgentTaskStatus.READY, AgentTaskStatus.FAILED, AgentTaskStatus.CANCELLED),
-            AgentTaskStatus.READY, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.CANCELLED),
-            AgentTaskStatus.RUNNING, Set.of(
+    private static final Map<AgentTaskStatus, Set<AgentTaskStatus>> TRANSITIONS = Map.ofEntries(
+            Map.entry(AgentTaskStatus.CREATED, Set.of(AgentTaskStatus.ANALYZING, AgentTaskStatus.CANCELLED)),
+            Map.entry(AgentTaskStatus.ANALYZING, Set.of(AgentTaskStatus.PLANNING, AgentTaskStatus.FAILED, AgentTaskStatus.CANCELLED)),
+            Map.entry(AgentTaskStatus.PLANNING, Set.of(AgentTaskStatus.READY, AgentTaskStatus.FAILED, AgentTaskStatus.CANCELLED)),
+            Map.entry(AgentTaskStatus.READY, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.CANCELLED)),
+            Map.entry(AgentTaskStatus.RUNNING, Set.of(
                     AgentTaskStatus.WAITING_TOOL, AgentTaskStatus.WAITING_USER,
                     AgentTaskStatus.ANALYZING_FAILURE, AgentTaskStatus.COMPLETED,
                     AgentTaskStatus.REPLANNING, AgentTaskStatus.FAILED
-            ),
-            AgentTaskStatus.WAITING_TOOL, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.FAILED),
-            AgentTaskStatus.WAITING_USER, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.CANCELLED),
-            AgentTaskStatus.REPLANNING, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.FAILED),
-            AgentTaskStatus.ANALYZING_FAILURE, Set.of(AgentTaskStatus.REPLANNING, AgentTaskStatus.COMPLETED, AgentTaskStatus.FAILED),
-            AgentTaskStatus.COMPLETED, Set.of(),
-            AgentTaskStatus.FAILED, Set.of(AgentTaskStatus.REPLANNING, AgentTaskStatus.CANCELLED),
-            AgentTaskStatus.CANCELLED, Set.of()
+            )),
+            Map.entry(AgentTaskStatus.WAITING_TOOL, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.FAILED)),
+            Map.entry(AgentTaskStatus.WAITING_USER, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.CANCELLED)),
+            Map.entry(AgentTaskStatus.REPLANNING, Set.of(AgentTaskStatus.RUNNING, AgentTaskStatus.FAILED)),
+            Map.entry(AgentTaskStatus.ANALYZING_FAILURE, Set.of(AgentTaskStatus.REPLANNING, AgentTaskStatus.COMPLETED, AgentTaskStatus.FAILED)),
+            Map.entry(AgentTaskStatus.COMPLETED, Set.of()),
+            Map.entry(AgentTaskStatus.FAILED, Set.of(AgentTaskStatus.REPLANNING, AgentTaskStatus.CANCELLED)),
+            Map.entry(AgentTaskStatus.CANCELLED, Set.of())
     );
 
     public boolean canTransition(AgentTaskStatus from, AgentTaskStatus to) {

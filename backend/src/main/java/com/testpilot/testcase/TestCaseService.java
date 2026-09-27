@@ -32,6 +32,10 @@ public class TestCaseService {
         return testCaseRepository.findByProjectIdOrderByCreatedAtDesc(projectId);
     }
 
+    public TestCase getTestCase(Long id) {
+        return testCaseRepository.findById(id).orElseThrow();
+    }
+
     public TestCase updateTestCase(Long id, TestCase updated) {
         TestCase tc = testCaseRepository.findById(id).orElseThrow();
         tc.setTitle(updated.getTitle());
@@ -42,5 +46,9 @@ public class TestCaseService {
         tc.setTestData(updated.getTestData());
         tc.setPriority(updated.getPriority());
         return testCaseRepository.save(tc);
+    }
+
+    public void deleteTestCase(Long id) {
+        testCaseRepository.delete(getTestCase(id));
     }
 }

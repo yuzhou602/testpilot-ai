@@ -5,11 +5,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.time.Duration;
+import java.util.Locale;
 import java.util.Map;
 
 @Slf4j
@@ -66,7 +68,7 @@ public class HttpTool implements AgentTool {
             String responseBody;
             int statusCode;
 
-            var exchange = client.method(org.springframework.http.HttpMethod.resolve(method))
+            var exchange = client.method(HttpMethod.valueOf(method.toUpperCase(Locale.ROOT)))
                     .bodyValue(body != null ? body : "")
                     .exchangeToMono(response -> response.bodyToMono(String.class)
                             .map(bodyStr -> Map.of(

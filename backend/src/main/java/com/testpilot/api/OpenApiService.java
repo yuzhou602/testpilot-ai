@@ -120,7 +120,7 @@ public class OpenApiService {
 
         Map<String, Object> properties = new HashMap<>();
         if (schema.getProperties() != null) {
-            for (Map.Entry<String, Schema<?>> prop : schema.getProperties().entrySet()) {
+            for (Map.Entry<String, Schema> prop : schema.getProperties().entrySet()) {
                 properties.put(prop.getKey(), schemaToJson(prop.getValue()));
             }
         }
