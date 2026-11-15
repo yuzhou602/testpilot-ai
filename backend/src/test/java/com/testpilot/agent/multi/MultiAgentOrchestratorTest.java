@@ -17,6 +17,8 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.nullable;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -67,7 +69,7 @@ class MultiAgentOrchestratorTest {
     void shouldExecuteSuccessfully() {
         when(plannerAgent.plan(any(), any())).thenReturn(testPlan);
 
-        when(executorAgent.executeStep(any(), any(), any(), any()))
+        when(executorAgent.executeStep(any(), any(), anyInt(), any()))
                 .thenReturn(ExecutorAgent.StepResult.builder()
                         .success(true)
                         .output("Success")
@@ -95,7 +97,7 @@ class MultiAgentOrchestratorTest {
         when(plannerAgent.plan(any(), any())).thenReturn(testPlan);
         when(plannerAgent.replan(any(), any(), any())).thenReturn(testPlan);
 
-        when(executorAgent.executeStep(any(), any(), any(), any()))
+        when(executorAgent.executeStep(any(), any(), anyInt(), any()))
                 .thenReturn(ExecutorAgent.StepResult.builder()
                         .success(false)
                         .error("Test failed")
@@ -112,7 +114,7 @@ class MultiAgentOrchestratorTest {
                         .summary("0/1 passed")
                         .build());
 
-        when(reviewerAgent.analyzeFailure(any(), any(), any(), any(), any()))
+        when(reviewerAgent.analyzeFailure(any(), any(), any(), nullable(String.class), any()))
                 .thenReturn(com.testpilot.agent.runtime.FailureAnalyzer.FailureAnalysis.builder()
                         .failureType("TEST_ERROR")
                         .rootCause("Test error")

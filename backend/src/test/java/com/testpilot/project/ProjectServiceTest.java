@@ -14,6 +14,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class ProjectServiceTest {
@@ -85,8 +86,7 @@ class ProjectServiceTest {
 
     @Test
     void shouldDeleteProject() {
-        when(projectRepository.findById(1L)).thenReturn(Optional.of(testProject));
-
         assertDoesNotThrow(() -> projectService.deleteProject(1L));
+        verify(projectRepository).deleteById(1L);
     }
 }

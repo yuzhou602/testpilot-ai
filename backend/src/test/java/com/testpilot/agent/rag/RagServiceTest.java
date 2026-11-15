@@ -15,6 +15,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -63,11 +64,11 @@ class RagServiceTest {
                 .embedding(testEmbedding())
                 .build();
 
-        when(embeddingRepository.findSimilar(any(), any(), any())).thenReturn(Arrays.asList(embedding));
+        when(embeddingRepository.findSimilar(any(), any(), anyInt())).thenReturn(Arrays.asList(embedding));
 
         List<RagService.RagResult> results = ragService.search(1L, query, null, 5);
 
-        assertNotNull(results);
+        assertEquals(1, results.size());
     }
 
     @Test
@@ -101,7 +102,7 @@ class RagServiceTest {
                 .embedding(testEmbedding())
                 .build();
 
-        when(embeddingRepository.findSimilar(any(), any(), any())).thenReturn(Arrays.asList(embedding));
+        when(embeddingRepository.findSimilar(any(), any(), anyInt())).thenReturn(Arrays.asList(embedding));
 
         String context = ragService.buildRagContext(1L, query, null);
 

@@ -27,7 +27,9 @@ class AgentStateMachineTest {
 
     @Test
     void shouldAllowRunningTransition() {
-        assertTrue(stateMachine.canTransition(AgentTaskStatus.PLANNING, AgentTaskStatus.RUNNING));
+        assertTrue(stateMachine.canTransition(AgentTaskStatus.PLANNING, AgentTaskStatus.READY));
+        assertTrue(stateMachine.canTransition(AgentTaskStatus.READY, AgentTaskStatus.RUNNING));
+        assertFalse(stateMachine.canTransition(AgentTaskStatus.PLANNING, AgentTaskStatus.RUNNING));
     }
 
     @Test
