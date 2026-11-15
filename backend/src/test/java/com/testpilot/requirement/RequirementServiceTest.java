@@ -15,6 +15,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class RequirementServiceTest {
@@ -91,8 +92,7 @@ class RequirementServiceTest {
 
     @Test
     void shouldDeleteRequirement() {
-        when(requirementRepository.findById(1L)).thenReturn(Optional.of(testRequirement));
-
         assertDoesNotThrow(() -> requirementService.deleteRequirement(1L));
+        verify(requirementRepository).deleteById(1L);
     }
 }
